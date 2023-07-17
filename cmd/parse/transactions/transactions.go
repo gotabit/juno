@@ -3,14 +3,14 @@ package transactions
 import (
 	"fmt"
 
-	parsecmdtypes "github.com/forbole/juno/v5/cmd/parse/types"
+	parsecmdtypes "github.com/gotabit/juno/v5/cmd/parse/types"
 
 	"github.com/rs/zerolog/log"
 
 	"github.com/spf13/cobra"
 
-	"github.com/forbole/juno/v5/parser"
-	"github.com/forbole/juno/v5/types/config"
+	"github.com/gotabit/juno/v5/parser"
+	"github.com/gotabit/juno/v5/types/config"
 )
 
 const (

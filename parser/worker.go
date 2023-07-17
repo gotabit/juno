@@ -7,22 +7,22 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/x/authz"
 
-	"github.com/forbole/juno/v5/logging"
+	"github.com/gotabit/juno/v5/logging"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 
-	"github.com/forbole/juno/v5/database"
-	"github.com/forbole/juno/v5/types/config"
+	"github.com/gotabit/juno/v5/database"
+	"github.com/gotabit/juno/v5/types/config"
 
-	"github.com/forbole/juno/v5/modules"
+	"github.com/gotabit/juno/v5/modules"
 
 	tmctypes "github.com/cometbft/cometbft/rpc/core/types"
 	tmtypes "github.com/cometbft/cometbft/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/forbole/juno/v5/node"
-	"github.com/forbole/juno/v5/types"
-	"github.com/forbole/juno/v5/types/utils"
+	"github.com/gotabit/juno/v5/node"
+	"github.com/gotabit/juno/v5/types"
+	"github.com/gotabit/juno/v5/types/utils"
 )
 
 // Worker defines a job consumer that is responsible for getting and
@@ -43,7 +43,7 @@ type Worker struct {
 func NewWorker(ctx *Context, queue types.HeightQueue, index int) Worker {
 	return Worker{
 		index:   index,
-		codec:   ctx.EncodingConfig.Codec,
+		codec:   ctx.EncodingConfig.Marshaler,
 		node:    ctx.Node,
 		queue:   queue,
 		db:      ctx.Database,

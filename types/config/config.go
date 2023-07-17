@@ -3,10 +3,10 @@ package config
 import (
 	"strings"
 
-	databaseconfig "github.com/forbole/juno/v5/database/config"
-	loggingconfig "github.com/forbole/juno/v5/logging/config"
-	nodeconfig "github.com/forbole/juno/v5/node/config"
-	parserconfig "github.com/forbole/juno/v5/parser/config"
+	databaseconfig "github.com/gotabit/juno/v5/database/config"
+	loggingconfig "github.com/gotabit/juno/v5/logging/config"
+	nodeconfig "github.com/gotabit/juno/v5/node/config"
+	parserconfig "github.com/gotabit/juno/v5/parser/config"
 )
 
 var (

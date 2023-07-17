@@ -9,15 +9,15 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	"github.com/jmoiron/sqlx"
 
-	"github.com/forbole/juno/v5/logging"
+	"github.com/gotabit/juno/v5/logging"
 
 	"github.com/lib/pq"
 
-	"github.com/forbole/juno/v5/database"
-	"github.com/forbole/juno/v5/types"
-	"github.com/forbole/juno/v5/types/config"
-	"github.com/forbole/juno/v5/types/env"
-	"github.com/forbole/juno/v5/types/utils"
+	"github.com/gotabit/juno/v5/database"
+	"github.com/gotabit/juno/v5/types"
+	"github.com/gotabit/juno/v5/types/config"
+	"github.com/gotabit/juno/v5/types/env"
+	"github.com/gotabit/juno/v5/types/utils"
 )
 
 // Builder creates a database connection with the given database connection info
@@ -46,7 +46,7 @@ func Builder(ctx *database.Context) (database.Database, error) {
 	postgresDb.SetMaxIdleConns(ctx.Cfg.MaxIdleConnections)
 
 	return &Database{
-		cdc:   ctx.EncodingConfig.Codec,
+		cdc:   ctx.EncodingConfig.Marshaler,
 		amino: ctx.EncodingConfig.Amino,
 
 		SQL:    postgresDb,

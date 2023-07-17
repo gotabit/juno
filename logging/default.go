@@ -11,8 +11,8 @@ import (
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
 
-	"github.com/forbole/juno/v5/modules"
-	"github.com/forbole/juno/v5/types"
+	"github.com/gotabit/juno/v5/modules"
+	"github.com/gotabit/juno/v5/types"
 )
 
 var (

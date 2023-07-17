@@ -1,23 +1,23 @@
 package registrar
 
 import (
-	"cosmossdk.io/simapp/params"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/gotabit/gotabit/app/params"
 
-	"github.com/forbole/juno/v5/node"
+	"github.com/gotabit/juno/v5/node"
 
-	"github.com/forbole/juno/v5/modules/telemetry"
+	"github.com/gotabit/juno/v5/modules/telemetry"
 
-	"github.com/forbole/juno/v5/logging"
+	"github.com/gotabit/juno/v5/logging"
 
-	"github.com/forbole/juno/v5/types/config"
+	"github.com/gotabit/juno/v5/types/config"
 
-	"github.com/forbole/juno/v5/modules/pruning"
+	"github.com/gotabit/juno/v5/modules/pruning"
 
-	"github.com/forbole/juno/v5/modules"
-	"github.com/forbole/juno/v5/modules/messages"
+	"github.com/gotabit/juno/v5/modules"
+	"github.com/gotabit/juno/v5/modules/messages"
 
-	"github.com/forbole/juno/v5/database"
+	"github.com/gotabit/juno/v5/database"
 )
 
 // Context represents the context of the modules registrar
@@ -87,7 +87,7 @@ func NewDefaultRegistrar(parser messages.MessageAddressesParser) *DefaultRegistr
 func (r *DefaultRegistrar) BuildModules(ctx Context) modules.Modules {
 	return modules.Modules{
 		pruning.NewModule(ctx.JunoConfig, ctx.Database, ctx.Logger),
-		messages.NewModule(r.parser, ctx.EncodingConfig.Codec, ctx.Database),
+		messages.NewModule(r.parser, ctx.EncodingConfig.Marshaler, ctx.Database),
 		telemetry.NewModule(ctx.JunoConfig),
 	}
 }

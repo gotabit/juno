@@ -1,13 +1,13 @@
 package parser
 
 import (
-	"cosmossdk.io/simapp/params"
+	"github.com/gotabit/gotabit/app/params"
 
-	"github.com/forbole/juno/v5/logging"
-	"github.com/forbole/juno/v5/node"
+	"github.com/gotabit/juno/v5/logging"
+	"github.com/gotabit/juno/v5/node"
 
-	"github.com/forbole/juno/v5/database"
-	"github.com/forbole/juno/v5/modules"
+	"github.com/gotabit/juno/v5/database"
+	"github.com/gotabit/juno/v5/modules"
 )
 
 // Context represents the context that is shared among different workers

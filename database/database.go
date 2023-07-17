@@ -1,13 +1,13 @@
 package database
 
 import (
-	"cosmossdk.io/simapp/params"
+	"github.com/gotabit/gotabit/app/params"
 
-	"github.com/forbole/juno/v5/logging"
+	"github.com/gotabit/juno/v5/logging"
 
-	databaseconfig "github.com/forbole/juno/v5/database/config"
+	databaseconfig "github.com/gotabit/juno/v5/database/config"
 
-	"github.com/forbole/juno/v5/types"
+	"github.com/gotabit/juno/v5/types"
 )
 
 // Database represents an abstract database that can be used to save data inside it

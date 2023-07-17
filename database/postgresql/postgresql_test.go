@@ -8,13 +8,13 @@ import (
 	"strings"
 	"testing"
 
-	"cosmossdk.io/simapp/params"
+	"github.com/gotabit/gotabit/app/params"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/forbole/juno/v5/database"
-	databaseconfig "github.com/forbole/juno/v5/database/config"
-	postgres "github.com/forbole/juno/v5/database/postgresql"
-	"github.com/forbole/juno/v5/logging"
+	"github.com/gotabit/juno/v5/database"
+	databaseconfig "github.com/gotabit/juno/v5/database/config"
+	postgres "github.com/gotabit/juno/v5/database/postgresql"
+	"github.com/gotabit/juno/v5/logging"
 )
 
 func TestDatabaseTestSuite(t *testing.T) {
@@ -29,7 +29,7 @@ type DbTestSuite struct {
 
 func (suite *DbTestSuite) SetupTest() {
 	// Create the codec
-	codec := params.MakeTestEncodingConfig()
+	codec := params.MakeEncodingConfig()
 
 	// Build the database
 	dbCfg := databaseconfig.NewDatabaseConfig(

@@ -1,14 +1,14 @@
 package types
 
 import (
-	"cosmossdk.io/simapp/params"
+	"github.com/gotabit/gotabit/app/params"
 
-	"github.com/forbole/juno/v5/logging"
-	"github.com/forbole/juno/v5/types/config"
+	"github.com/gotabit/juno/v5/logging"
+	"github.com/gotabit/juno/v5/types/config"
 
-	"github.com/forbole/juno/v5/database"
-	"github.com/forbole/juno/v5/database/builder"
-	"github.com/forbole/juno/v5/modules/registrar"
+	"github.com/gotabit/juno/v5/database"
+	"github.com/gotabit/juno/v5/database/builder"
+	"github.com/gotabit/juno/v5/modules/registrar"
 )
 
 // Config contains all the configuration for the "parse" command
@@ -63,7 +63,7 @@ func (cfg *Config) WithEncodingConfigBuilder(b EncodingConfigBuilder) *Config {
 // GetEncodingConfigBuilder returns the encoding config builder to be used
 func (cfg *Config) GetEncodingConfigBuilder() EncodingConfigBuilder {
 	if cfg.encodingConfigBuilder == nil {
-		return params.MakeTestEncodingConfig
+		return params.MakeEncodingConfig
 	}
 	return cfg.encodingConfigBuilder
 }

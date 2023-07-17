@@ -4,9 +4,9 @@
 
 ![banner](.docs/.img/logo.png)
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/desmos-labs/juno/Tests)](https://github.com/forbole/juno/actions?query=workflow%3ATests)
-[![Go Report Card](https://goreportcard.com/badge/github.com/forbole/juno)](https://goreportcard.com/report/github.com/forbole/juno)
-![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/forbole/juno)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/desmos-labs/juno/Tests)](https://github.com/gotabit/juno/actions?query=workflow%3ATests)
+[![Go Report Card](https://goreportcard.com/badge/github.com/gotabit/juno)](https://goreportcard.com/report/github.com/gotabit/juno)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/gotabit/juno)
 
 > Juno is a Cosmos Hub blockchain data aggregator and exporter that provides the ability for developers and clients to query for indexed chain data.
 

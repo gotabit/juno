@@ -7,10 +7,10 @@ import (
 	"reflect"
 	"unsafe"
 
-	"cosmossdk.io/simapp/params"
 	db "github.com/cometbft/cometbft-db"
 	"github.com/cosmos/cosmos-sdk/codec"
 	storetypes "github.com/cosmos/cosmos-sdk/store/types"
+	"github.com/gotabit/gotabit/app/params"
 
 	cfg "github.com/cometbft/cometbft/config"
 	"github.com/cometbft/cometbft/libs/log"
@@ -21,7 +21,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/spf13/viper"
 
-	"github.com/forbole/juno/v5/node"
+	"github.com/gotabit/juno/v5/node"
 )
 
 var (
@@ -62,7 +62,7 @@ func NewSource(home string, encodingConfig *params.EncodingConfig) (*Source, err
 	return &Source{
 		StoreDB: levelDB,
 
-		Codec:       encodingConfig.Codec,
+		Codec:       encodingConfig.Marshaler,
 		LegacyAmino: encodingConfig.Amino,
 
 		BlockStore: tmstore.NewBlockStore(blockStoreDB),
